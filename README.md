@@ -30,7 +30,7 @@ GOOGLE_KEY=YourKeyHere
 
 #### Step 4: 
 
-- In your terminal run yarn start. 
+- In your terminal run `yarn start`. 
 - In the browser, click on Run on IOS Simulator.
 
 ## Dependencies 
