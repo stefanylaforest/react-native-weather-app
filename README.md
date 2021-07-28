@@ -2,6 +2,23 @@
 
 React Native, Expo, Styled-Components
 
+## How To Run The App in IOS
+
+Step 1: 
+- Clone the repo
+- Open it in your favorite editor
+- Open a terminal in your editor and run `yarn install`
+
+Step 2:
+
+1. Download xcode 
+2. In the menu bar go to Xcode -> Open Developer Tools
+
+Step 3: 
+
+- In your terminal run yarn start. 
+- In the browser, click on Run on IOS Simulator.
+
 ## Dependencies 
 
 ```json
