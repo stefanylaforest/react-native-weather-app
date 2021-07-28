@@ -4,7 +4,7 @@ React Native, Expo, Styled-Components
 
 
 
-<img src="https://user-images.githubusercontent.com/66086002/127359185-90067028-c3c0-4ccc-8ddb-5bca37c6ec6e.png" alt="The User Interface" width="200"/>
+<img src="https://user-images.githubusercontent.com/66086002/127359185-90067028-c3c0-4ccc-8ddb-5bca37c6ec6e.png" alt="The User Interface" width="500"/>
 
 ## How To Run The App in IOS
 
