@@ -14,8 +14,6 @@ const App = () => {
   const [long, setLong] = useState(-79.3832);
   const [weather, setWeather] = useState({});
 
-  const controller = new AbortController();
-  const signal = controller.signal;
 
   //fetch lat long by city
   const fetchLatLongHandler = () => {
