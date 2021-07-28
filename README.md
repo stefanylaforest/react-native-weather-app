@@ -26,7 +26,7 @@ GOOGLE_KEY=YourKeyHere
 #### Step 3:
 
 - Download xcode 
-- In the menu bar go to Xcode -> Open Developer Tools
+- In the menu bar go to Xcode -> Open Developer Tools -> Simulator
 
 #### Step 4: 
 
