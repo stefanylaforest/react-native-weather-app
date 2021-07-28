@@ -2,8 +2,9 @@
 
 React Native, Expo, Styled-Components
 
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-28 at 17 14 39](https://user-images.githubusercontent.com/66086002/127358570-7120de5b-906a-40cb-ae09-79a5bb8096af.png)
 
+
+<img src="https://user-images.githubusercontent.com/66086002/127359185-90067028-c3c0-4ccc-8ddb-5bca37c6ec6e.png" alt="The User Interface" width="200"/>
 
 ## How To Run The App in IOS
 
