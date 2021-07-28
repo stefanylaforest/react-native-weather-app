@@ -45,7 +45,7 @@ const DateContainer = styled.View`
 `;
 
 const WeekDay = styled.Text`
-  font-size: 1.5em;
+  font-size: 24px;
   text-align: center;
   margin: 3px;
 `;
@@ -70,11 +70,11 @@ const DegreeView = styled.View`
 `;
 
 const Degree = styled.Text`
-  font-size: 1.5em;
+  font-size: 24px;
 `;
 
 const FeelsLike = styled.Text`
-  font-size: 0.9em;
+  font-size: 14px;
 `;
 
 export default DailyForecast;

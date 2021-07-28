@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, ImageBackground } from "react-native";
+import { ScrollView } from "react-native";
 import ForecastSearch from "./components/ForecastSearch";
 import CurrentForecast from "./components/CurrentForecast";
 import DailyForecast from "./components/DailyForecast";
 import styled from "styled-components/native";
 import config from "./config";
-
-const img = require("./assets/bg.jpg");
 
 const App = () => {
   const [toggleSearch, setToggleSearch] = useState("city");
@@ -61,18 +59,18 @@ const App = () => {
 
   return (
     <Container>
-      <ImageBackground source={img} styles={styles.image}>
-        <ForecastSearch
-          city={city}
-          setCity={setCity}
-          fetchLatLongHandler={fetchLatLongHandler}
-          toggleSearch={toggleSearch}
-          setToggleSearch={setToggleSearch}
-          fetchByPostalHandler={fetchByPostalHandler}
-          setPostalCode={setPostalCode}
-          postalCode={postalCode}
-        />
-        <CurrentForecast currentWeather={weather} timezone={weather.timezone} />
+      <ForecastSearch
+        city={city}
+        setCity={setCity}
+        fetchLatLongHandler={fetchLatLongHandler}
+        toggleSearch={toggleSearch}
+        setToggleSearch={setToggleSearch}
+        fetchByPostalHandler={fetchByPostalHandler}
+        setPostalCode={setPostalCode}
+        postalCode={postalCode}
+      />
+      <CurrentForecast currentWeather={weather} timezone={weather.timezone} />
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }} style={{ flex: 1 }}>
         <FutureForecastContainer>
           {weather.daily ? (
             weather.daily.map((day, index) => {
@@ -84,20 +82,14 @@ const App = () => {
             <NoWeather>No Weather to show</NoWeather>
           )}
         </FutureForecastContainer>
-      </ImageBackground>
+      </ScrollView>
     </Container>
   );
 };
 
-const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-  },
-});
-
 const Container = styled.View`
   flex: 1;
+  background-color: dodgerblue;
 `;
 
 const NoWeather = styled.Text`
@@ -109,7 +101,7 @@ const FutureForecastContainer = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  /* margin-top: 50px; */
 `;
 
 export default App;

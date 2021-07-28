@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text, TextInput } from "react-native";
 import styled from "styled-components/native";
 
 const ForecastSearch = ({
@@ -12,10 +13,10 @@ const ForecastSearch = ({
   postalCode,
 }) => {
   const handleSubmit = (e) => {
-    if (e.key === "Enter" && toggleSearch === "city") {
+    if (toggleSearch === "city") {
       fetchLatLongHandler();
     }
-    if (e.key === "Enter" && toggleSearch === "postal") {
+    if (toggleSearch === "postal") {
       fetchByPostalHandler();
     }
   };
@@ -34,28 +35,25 @@ const ForecastSearch = ({
         <ButtonLabel>Search By</ButtonLabel>
         <Buttons
           title="City"
-          color={
-            toggleSearch === "city" ? "rgba(255, 255, 255, 0.3)" : "transparent"
-          }
+          color={toggleSearch === "city" ? "white" : "rgba(255, 255, 255, 0.5)"}
           accessibilityLabel="Search Weather By City"
           onPress={setToggleByCity}
         />
         <Buttons
           title="Postal Code/Zip"
-          color={
-            toggleSearch === "city" ? "transparent" : "rgba(255, 255, 255, 0.3)"
-          }
+          color={toggleSearch === "city" ? "rgba(255, 255, 255, 0.5)" : "white"}
           accessibilityLabel="Search Weather By ZIP/Postal Code"
           onPress={setToggleByPostal}
         />
       </SearchBy>
+
       <SearchCity
         onChangeText={toggleSearch === "city" ? setCity : setPostalCode}
         value={toggleSearch === "city" ? city : postalCode}
         placeholder={
           toggleSearch === "city" ? "Search By City" : "Search By Postal Code"
         }
-        onKeyPress={handleSubmit}
+        onSubmitEditing={handleSubmit}
       />
     </Container>
   );
@@ -65,6 +63,7 @@ const Container = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 35px;
 `;
 
 const Buttons = styled.Button`
@@ -78,7 +77,7 @@ const SearchBy = styled.View`
   color: white;
   margin-top: 10px;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   width: 95%;
   max-width: 700px;
 `;
@@ -89,10 +88,10 @@ const ButtonLabel = styled.Text`
 `;
 
 const SearchCity = styled.TextInput`
-  height: 20px;
+  height: 50px;
   margin: 12px;
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   width: 95%;
   max-width: 700px;

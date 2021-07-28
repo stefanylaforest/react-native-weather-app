@@ -78,7 +78,6 @@ const CurrentForecast = ({ currentWeather }) => {
 };
 
 const CurrentView = styled.View`
-  position: sticky;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +98,7 @@ const MainInfoContainer = styled.View`
 
 const Description = styled.Text`
   color: white;
-  font-size: 1.2em;
+  font-size: 15px;
   text-transform: capitalize;
 `;
 
@@ -124,7 +123,7 @@ const Timezone = styled.Text`
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  font-size: 1.3em;
+  font-size: 15px;
 `;
 
 const CurrentDegrees = styled.Text`
@@ -132,7 +131,7 @@ const CurrentDegrees = styled.Text`
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  font-size: 4em;
+  font-size: 60px;
 `;
 
 const Row = styled.View`
@@ -149,12 +148,12 @@ const DetailsBox = styled.View`
 `;
 
 const Label = styled.Text`
-  font-size: 1.2em;
+  font-size: 18px;
 `;
 
 const Details = styled.Text`
   color: black;
-  font-size: 1em;
+  font-size: 15px;
   text-transform: capitalize;
 `;
 
