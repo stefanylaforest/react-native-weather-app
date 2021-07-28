@@ -14,7 +14,7 @@ const App = () => {
   const [long, setLong] = useState(-79.3832);
   const [weather, setWeather] = useState({});
   
-    const controller = new AbortController();
+  const controller = new AbortController();
   const signal = controller.signal;
 
 
