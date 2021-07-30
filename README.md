@@ -19,8 +19,8 @@ React Native, Expo, Styled-Components
 - Create a .env file in the root folder and put your keys in the file like this: 
 
 ```
-API_KEY=YourKeyHere
-GOOGLE_KEY=YourKeyHere
+API_KEY=YourOpenWeatherKeyHere
+GOOGLE_KEY=YourGoogleKeyHere
 ```
 
 #### Step 3:
