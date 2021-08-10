@@ -35,13 +35,13 @@ const ForecastSearch = ({
         <ButtonLabel>Search By</ButtonLabel>
         <Buttons
           title="City"
-          color={toggleSearch === "city" ? "white" : "rgba(255, 255, 255, 0.5)"}
+          color={toggleSearch === "city" ? "white" : "rgba(255, 255, 255, 0.6)"}
           accessibilityLabel="Search Weather By City"
           onPress={setToggleByCity}
         />
         <Buttons
           title="Postal Code/Zip"
-          color={toggleSearch === "city" ? "rgba(255, 255, 255, 0.5)" : "white"}
+          color={toggleSearch === "city" ? "rgba(255, 255, 255, 0.6)" : "white"}
           accessibilityLabel="Search Weather By ZIP/Postal Code"
           onPress={setToggleByPostal}
         />

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, ImageBackground } from "react-native";
 import ForecastSearch from "./components/ForecastSearch";
 import CurrentForecast from "./components/CurrentForecast";
 import DailyForecast from "./components/DailyForecast";
 import styled from "styled-components/native";
 import config from "./config";
+import bgImg from "./assets/4.png";
 
 const App = () => {
   const [toggleSearch, setToggleSearch] = useState("city");
@@ -59,30 +60,32 @@ const App = () => {
 
   return (
     <Container>
-      <ForecastSearch
-        city={city}
-        setCity={setCity}
-        fetchLatLongHandler={fetchLatLongHandler}
-        toggleSearch={toggleSearch}
-        setToggleSearch={setToggleSearch}
-        fetchByPostalHandler={fetchByPostalHandler}
-        setPostalCode={setPostalCode}
-        postalCode={postalCode}
-      />
-      <CurrentForecast currentWeather={weather} timezone={weather.timezone} />
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }} style={{ flex: 1 }}>
-        <FutureForecastContainer>
-          {weather.daily ? (
-            weather.daily.map((day, index) => {
-              if (index !== 0) {
-                return <DailyForecast key={day.dt} day={day} index={index} />;
-              }
-            })
-          ) : (
-            <NoWeather>No Weather to show</NoWeather>
-          )}
-        </FutureForecastContainer>
-      </ScrollView>
+      <ImageBackground source={bgImg} style={{ width: "100%", height: "100%" }}>
+        <ForecastSearch
+          city={city}
+          setCity={setCity}
+          fetchLatLongHandler={fetchLatLongHandler}
+          toggleSearch={toggleSearch}
+          setToggleSearch={setToggleSearch}
+          fetchByPostalHandler={fetchByPostalHandler}
+          setPostalCode={setPostalCode}
+          postalCode={postalCode}
+        />
+        <CurrentForecast currentWeather={weather} timezone={weather.timezone} />
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} style={{ flex: 1 }}>
+          <FutureForecastContainer>
+            {weather.daily ? (
+              weather.daily.map((day, index) => {
+                if (index !== 0) {
+                  return <DailyForecast key={day.dt} day={day} index={index} />;
+                }
+              })
+            ) : (
+              <NoWeather>No Weather to show</NoWeather>
+            )}
+          </FutureForecastContainer>
+        </ScrollView>
+      </ImageBackground>
     </Container>
   );
 };
